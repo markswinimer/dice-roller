@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Die.css"
 
 class Die extends Component {
   static defaultProps = {
@@ -24,7 +25,9 @@ class Die extends Component {
     }
 
     let dieFace = "fas fa-dice-" + final;
-
+    console.log(dieFace)
+    dieFace += " " + (this.props.shaking ? 'Shaking' : '')
+    console.log(dieFace)
     return(
       <div className="Die">
         <i className={dieFace}></i>
